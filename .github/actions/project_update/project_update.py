@@ -79,7 +79,7 @@ def add_item_to_project(content_id, project_data):
     query_template = Template(
         """
           mutation {
-            addProjectV2ItemById(input: {projectId: "$project_id" contentId: "$content_id"}) {
+            addProjectV2ItemById(input: {projectId: "$project_id", contentId: "$content_id"}) {
               item {
                 id
               }
@@ -87,14 +87,11 @@ def add_item_to_project(content_id, project_data):
           }
         """
     )
-    query = query_template.substitute(
-        project_id=project_data['id'],
-        content_id=content_id
-    )
+    query = query_template.substitute(project_id=project_data['id'], content_id=content_id)
     result = run_graphql(query)
     try:
         return result['data']['addProjectV2ItemById']['item']['id']
-    except KeyError as e:
+    except (KeyError, TypeError) as e:
         print(f'\tAdd item error:\n\t\t{result}')
         raise e
 

@@ -194,14 +194,18 @@ if __name__ == '__main__':
     args = get_arguments()
     content_id = args.content_id
     project_data = get_project_data()
-    item_id = add_item_to_project(content_id, project_data)
-    if args.status:
-        update_field_value_for_single_select_item(item_id, 'Status', args.status, project_data)
-    if args.priority:
-        update_field_value_for_single_select_item(item_id, 'Priority', args.priority, project_data)
-    if args.work:
-        update_field_value_for_single_select_item(item_id, 'Work', args.work, project_data)
-    if args.timestamp:
-        timestamp = parser.parse(args.timestamp)
-        timestamp_str = timestamp.strftime('%Y-%m-%d %H:%M:%S')
-        update_field_value_for_text_item(item_id, 'Timestamp', timestamp_str, project_data)
+    try:
+        item_id = add_item_to_project(content_id, project_data)
+        if args.status:
+            update_field_value_for_single_select_item(item_id, 'Status', args.status, project_data)
+        if args.priority:
+            update_field_value_for_single_select_item(item_id, 'Priority', args.priority, project_data)
+        if args.work:
+            update_field_value_for_single_select_item(item_id, 'Work', args.work, project_data)
+        if args.timestamp:
+            timestamp = parser.parse(args.timestamp)
+            timestamp_str = timestamp.strftime('%Y-%m-%d %H:%M:%S')
+            update_field_value_for_text_item(item_id, 'Timestamp', timestamp_str, project_data)
+    except Exception as e:
+        print(f'Error: {str(e)}')
+

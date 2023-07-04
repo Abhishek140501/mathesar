@@ -90,5 +90,5 @@ DISPLAY_OPTIONS_BY_UI_TYPE ={
             ]
         },
         # UIType.MONEY: _money_display_options_schema,
-        UIType.MONEY: cache(_money_display_options_schema),
+         UIType.MONEY: _money_display_options_schema,
     }

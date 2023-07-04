@@ -23,6 +23,8 @@ def _money_display_options_schema():
             }]
     }
 
+_money_display_options_schema = cache(_money_display_options_schema)
+
 
 DISPLAY_OPTIONS_BY_UI_TYPE ={
         UIType.BOOLEAN:

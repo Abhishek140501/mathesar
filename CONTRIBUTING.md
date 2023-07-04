@@ -14,7 +14,7 @@ We highly recommend joining our [Matrix community](https://wiki.mathesar.org/en/
 
 1. **Find an [issue](https://github.com/centerofci/mathesar/issues) to work on.**
 
-    - ✅ Our easiest issues are labeled [good first issue](https://github.com/centerofci/mathesar/issues?q=is%3Aopen+is%3Aissue+no%3Aassignee+label%3A%22good+first+issue%22) and are a great place to start. However keep in mind that we're not always entirely sure of the necessary steps to solve a problem when we open an issue. 
+    - ✅ Our easiest issues are labeled [good first issue](https://github.com/centerofci/mathesar/issues?q=is%3Aopen+is%3Aissue+no%3Aassignee+label%3A%22good+first+issue%22) and are a great place to start. However keep in mind that we're not always entirely sure of the necessary steps to solve a problem when we open an issue.
     - ✅ Slightly more challenging issues are still labeled [help wanted](https://github.com/centerofci/mathesar/issues?q=is%3Aopen+is%3Aissue+no%3Aassignee+label%3A%22help+wanted%22). These can be a good place to start if you have some experience coding but are not yet familiar with our codebase.
     - ❌ Issues are not appropriate if they meet any of the following criteria:
         - already assigned to someone
@@ -27,7 +27,7 @@ We highly recommend joining our [Matrix community](https://wiki.mathesar.org/en/
 1. ***(Optionally)* Claim the issue.**
 
     If the Mathesar team has already merged one of your PRs, then you may wish to ear-mark the issue for yourself so that other do not work on it concurrently.
-    
+
     However, **if you are brand new to Mathesar, we recommend skipping this step** and making your changes *without* claiming the issue. (A core team member will assign the issue to you *after* you open a PR.) This recommendation is designed to reduce the overhead the core team has experienced from a high volume of contributors failing to follow through with their intent to submit PRs.
 
     If you decide to claim the issue:
@@ -41,7 +41,7 @@ We highly recommend joining our [Matrix community](https://wiki.mathesar.org/en/
 1. **Begin making your changes.**
 
     - Refer to our **[Developer Guide](./DEVELOPER_GUIDE.md)** for questions about the code.
-    - Make sure to follow our [front end code standards](./mathesar_ui/STANDARDS.md) and [API standards](./mathesar/api/STANDARDS.md) where applicable.
+    - Make sure to follow our [front end code standards][def] and [API standards](./mathesar/api/STANDARDS.md) where applicable.
     - If you are not familiar with GitHub or pull requests, please follow [GitHub's "Hello World" guide](https://guides.github.com/activities/hello-world/) first. Make sure to commit your changes on a new git branch named after the ticket you claimed. Base that new branch on our `develop` branch.
     - Commit early, commit often. Write [good commit messages](https://gist.github.com/robertpainsi/b632364184e70900af4ab688decf6f53). Try to keep pull requests small if possible, since it makes review easier.
     - If you expect your work to last longer than 1 week, open a draft pull request for your in-progress work.
@@ -61,7 +61,7 @@ We encourage and appreciate code review by contributors. Feel free to review any
 
 ## Contributing documentation
 
-- Help improve our user and administrator documentation (published to https://docs.mathesar.org/) by editing the markdown files in the `/docs` directory of this repo. See our [Documentation guide](./docs/README.md) for more info.
+- Help improve our user and administrator documentation (published to <https://docs.mathesar.org/>) by editing the markdown files in the `/docs` directory of this repo. See our [Documentation guide](./docs/README.md) for more info.
 
 - Developer-focused documentation lives in other markdown files throughout this repo, and we welcome PRs to improve this content. All PRs should target the `develop` branch.
 
@@ -71,3 +71,4 @@ Due to limited capacity, we are currently unable to accept design volunteers. Pl
 
 Please read through our [Design](https://wiki.mathesar.org/en/design) section to learn more about our design process.
 
+[def]: ./mathesar_ui/STANDARDS.md

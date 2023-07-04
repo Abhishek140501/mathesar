@@ -1,6 +1,6 @@
 import json
 from mathesar.database.types import UIType
-from lazydict import LazyDictionary
+from functools import cache
 
 
 def _money_display_options_schema():
@@ -24,8 +24,7 @@ def _money_display_options_schema():
     }
 
 
-DISPLAY_OPTIONS_BY_UI_TYPE = LazyDictionary(
-    {
+DISPLAY_OPTIONS_BY_UI_TYPE ={
         UIType.BOOLEAN:
         {
             "options": [
@@ -90,7 +89,6 @@ DISPLAY_OPTIONS_BY_UI_TYPE = LazyDictionary(
                 {"name": "show_units", "type": "boolean"},
             ]
         },
-        # NOTE: below callable will be evaluated lazily by LazyDictionary
-        UIType.MONEY: _money_display_options_schema,
+        # UIType.MONEY: _money_display_options_schema,
+        UIType.MONEY: cache(_money_display_options_schema),
     }
-)

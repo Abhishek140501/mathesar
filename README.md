@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/845767/218793207-a84a8c9e-d147-40a8-839b-f2b5d8b1ccba.png" width=450px alt="Mathesar logo"/>
+    <img src="https://user-images.githubusercontent.com/845767/218793207-a84a8c9e-d147-40a8-839b-f2b5d8b1ccba.png" width="450px" alt="Mathesar logo"/>
 </p>
 <p align="center"><b>An intuitive UI for managing data, for users of all technical skill levels. Built on Postgres.</b></p>
 <p align="center">
@@ -9,10 +9,16 @@
     <img alt="Codecov" src="https://img.shields.io/codecov/c/github/centerofci/mathesar">
 </p>
 
-<p align="center">
-  <a href="https://mathesar.org?ref=github-readme" target="_blank">Website</a> • <a href="https://docs.mathesar.org?ref=github-readme" target="_blank">Docs</a> • <a href="https://demo.mathesar.org?ref=github-readme" target="_blank">Live Demo</a> • <a href="https://wiki.mathesar.org/en/community/matrix" target="_blank">Matrix (chat)</a> • <a href="https://discord.gg/enaKqGn5xx" target="_blank">Discord</a> • <a href="https://wiki.mathesar.org/" target="_blank">Wiki</a>
+  <p align="center">
+    <a href="https://mathesar.org?ref=github-readme" target="_blank">Website</a> •
+    <a href="https://docs.mathesar.org?ref=github-readme" target="_blank">Docs</a> •
+    <a href="https://demo.mathesar.org?ref=github-readme" target="_blank">Live Demo</a> •
+    <a href="https://wiki.mathesar.org/en/community/matrix" target="_blank">Matrix (chat)</a> •
+    <a href="https://discord.gg/enaKqGn5xx" target="_blank">Discord</a> •
+    <a href="https://wiki.mathesar.org/" target="_blank">Wiki</a>
 </p>
-
+  </span>
+</p>
 
 # Mathesar
 
@@ -22,7 +28,7 @@ You can use Mathesar to build **data models**, **enter data**, and even **build 
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**
+## Table of Contents
 
 - [Sponsors](#sponsors)
 - [Status](#status)
@@ -38,32 +44,35 @@ You can use Mathesar to build **data models**, **enter data**, and even **build 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Sponsors
+
 Our top sponsors! Become a sponsor on [GitHub](https://github.com/sponsors/centerofci) or [Open Collective](https://opencollective.com/mathesar).
 
 <table>
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%">
-          <a href="https://www.thingylabs.io/">
-              <img src="https://user-images.githubusercontent.com/287034/226116547-cd28e16a-4c89-4a01-bc98-5a19b02ab1b2.png" width="100px;" alt="Thingylabs GmbH"/>
-              <br />
-              <sub><b>Thingylabs GmbH</b></sub>
-          </a>
+        <a href="https://www.thingylabs.io/">
+          <img src="https://user-images.githubusercontent.com/287034/226116547-cd28e16a-4c89-4a01-bc98-5a19b02ab1b2.png" width="100px" alt="Thingylabs GmbH" />
           <br />
+          <sub><b>Thingylabs GmbH</b></sub>
+        </a>
+        <br />
       </td>
     </tr>
   </tbody>
 </table>
 
 ## Status
+
 - [x] **Public Alpha**: You can install and deploy Mathesar on your server. Go easy on us!
 - [ ] **Public Beta**: Stable and feature-rich enough to implement in production
 - [ ] **Public**: Production-ready
 
 We are currently in the **public alpha** stage.
 
-## Join our community!
-The Mathesar team is on [Matrix](https://wiki.mathesar.org/en/community/matrix) (chat service). We also have [mailing lists](https://wiki.mathesar.org/en/community/mailing-lists) and the core team discusses day-to-day work on our developer mailing list. 
+## Join our community
+
+The Mathesar team is on [Matrix](https://wiki.mathesar.org/en/community/matrix) (chat service). We also have [mailing lists](https://wiki.mathesar.org/en/community/mailing-lists) and the core team discusses day-to-day work on our developer mailing list.
 
 ## Screenshots
 
@@ -80,9 +89,11 @@ The Mathesar team is on [Matrix](https://wiki.mathesar.org/en/community/matrix) 
 ![db-page](https://user-images.githubusercontent.com/287034/220773522-8c1c1483-2389-4f5e-83b2-e54836983035.png)  
 
 ## Live Demo
+
 Check out a [live demo of Mathesar here](https://demo.mathesar.org)!
 
 ## Features
+
 - **Built on Postgres**: Connect to an existing Postgres database or set one up from scratch.
 - **Set up your data models**: Easily create and update Postgres schemas and tables.
 - **Data entry**: Use our spreadsheet-like interface to view, create, update, and delete table records.
@@ -94,9 +105,11 @@ Check out a [live demo of Mathesar here](https://demo.mathesar.org)!
 - **Basic access control**: Users can have Viewer (read-only), Editor (can only edit data, but not data structure), or Manager (can edit both data and its structure) roles.
 
 ## Self-hosting
+
 Please see [our documentation](https://docs.mathesar.org/) for instructions on installing Mathesar on your own server.
 
 ## Our motivation
+
 Mathesar is a non-profit project. Our goal is to make understanding and working with data easy for everyone.
 
 Databases have been around for a long time and solve common data problems really well. But working with databases often requires custom software. Or complex tooling that people struggle to get their heads around.
@@ -104,7 +117,9 @@ Databases have been around for a long time and solve common data problems really
 We want to make existing database functionality more accessible, for users of all technical skill levels.
 
 ## Contributing
+
 We actively encourage contribution! Get started by reading our [Contributor Guide](./CONTRIBUTING.md).
 
 ## License
+
 Mathesar is open source under the GPLv3 license - see [LICENSE](LICENSE). It also contains derivatives of third-party open source modules licensed under the MIT license. See the list and respective licenses in [THIRDPARTY](THIRDPARTY).

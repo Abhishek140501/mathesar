@@ -13,8 +13,8 @@ The API is split into two namespaces:
 
 DRF provides a simple web-based UI for interacting with the Mathesar API. After logging in through the Mathesar UI, you can browse the root of each API namespace at the following URLs:
 
-- http://localhost:8000/api/db/v0/
-- http://localhost:8000/api/ui/v0/
+- <http://localhost:8000/api/db/v0/>
+- <http://localhost:8000/api/ui/v0/>
 
 If you prefer a non-browser tool for API development, you'll have to:
 
@@ -26,6 +26,7 @@ If you prefer a non-browser tool for API development, you'll have to:
 ## Generate the OpenAPI spec
 
 To generate the OpenAPI spec file in YAML format,run the following command in the respective environment:
+
 ```bash
 python manage.py spectacular --color --file schema.yml
 ```

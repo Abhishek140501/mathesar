@@ -1,6 +1,99 @@
 import { ImmutableSet, WritableSet } from '@mathesar-component-library';
 import { get, writable, type Unsubscriber, type Writable } from 'svelte/store';
 
+// Function to check if a column has an unorderable type
+function isUnorderableType(columnType) {
+  const unorderableTypes = ['point', 'json']; // Add other unorderable types as needed
+  return unorderableTypes.includes(columnType);
+}
+
+// ... (Other code)
+
+export default class SheetSelection<
+  Row extends SelectionRow,
+  Column extends SelectionColumn,
+> {
+  selectMultipleCells: any;
+  // ... (Other code)
+
+  /**
+   * Use this only for programmatic selection
+   *
+   * Prefer: onColumnSelectionStart when
+   * selection is done using
+   * user interactions
+   */
+  toggleColumnSelection(column: Column): boolean {
+    if (isUnorderableType(column.type)) {
+      console.error("Ordering by unorderable types is not allowed!");
+      return false;
+    }
+
+    const isCompleteColumnSelected = this.isCompleteColumnSelected(column);
+    this.activateCell({ rowIndex: 0 }, { id: column.id });
+
+    if (isCompleteColumnSelected) {
+      this.resetSelection();
+      return false;
+    }
+
+    const rows = this.getRows();
+
+    if (rows.length === 0) {
+      this.resetSelection();
+      this.columnsSelectedWhenTheTableIsEmpty.add(column.id);
+      return true;
+    }
+
+    const cells: Cell<Row, Column>[] = [];
+    rows.forEach((row) => {
+      cells.push([row, column]);
+    });
+
+    // Clearing the selection
+    // since we do not have cmd+click to select
+    // disjointed cells
+    this.resetSelection();
+    this.selectMultipleCells(cells);
+    return true;
+  }
+
+  /**
+   * Use this only for programmatic selection
+   *
+   * Prefer: onRowSelectionStart when
+   * selection is done using
+   * user interactions
+   */
+  toggleRowSelection(row: Row): void {
+    if (isUnorderableType(row.type)) {
+      console.error("Ordering by unorderable types is not allowed!");
+      return;
+    }
+
+    const isCompleteRowSelected = this.isCompleteRowSelected(row);
+
+    if (isCompleteRowSelected) {
+      // Clear the selection - deselect the row
+      this.resetSelection();
+    } else {
+      const cells: Cell<Row, Column>[] = [];
+      this.getColumns().forEach((column) => {
+        cells.push([row, column]);
+      });
+
+      // Clearing the selection
+      // since we do not have cmd+click to select
+      // disjointed cells
+      this.resetSelection();
+      this.selectMultipleCells(cells);
+    }
+  }
+
+  // ... (Other code)
+}
+
+
 export interface SelectionColumn {
   id: number | string;
 }
